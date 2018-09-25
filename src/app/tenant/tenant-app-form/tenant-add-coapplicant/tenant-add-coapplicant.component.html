@@ -1,0 +1,23 @@
+<div class="container" style="width:850px; padding-top:30px">
+  <div class="well">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="onClick(f)" #f="ngForm">
+        <div class="row">
+          <h3>Enter Co-Applicant Details: </h3>
+          <div class="form-group col-xs-6">
+            <label for="coAppName">Name</label>
+            <input type="text" id="coAppName" name="coAppName" ngModel class="form-control" required>
+          </div>
+          <div class="form-group col-xs-6">
+            <label for="coAppEmail">Email</label>
+            <input type="email" id="coAppEmail" name="coAppEmail" ngModel class="form-control" required email>
+          </div>
+        </div>
+        <br>
+        <button class="btn btn-success btn-block" type="submit" [disabled]="!f.valid" >Send Email and Continue to Apply</button>
+      </form>
+    </div>
+  </div>
+  </div>
+</div>

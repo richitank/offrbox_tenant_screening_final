@@ -1,0 +1,83 @@
+<body>
+    <div class="container">
+      <div class="well">
+        <div class="row">
+          
+          <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <form (ngSubmit)="onSignup(f)" #f="ngForm">
+              <div class="row">
+                <h3 style="font-style:bold;"> 1. Choose Your Screening Method</h3>
+                  <label>
+                     <a></a>
+                     <!-- <div class="col-md-6 col-md-3">
+                     <a href="" class="thumbnail"><img src="screening1.png" alt="screening1 image"></a>
+                    </div> -->
+                      <input type="radio" name="opt1" value="1" ngModel />
+                      <img src="../../../assets/screening1.png" class="thumbnail" style="max-width:222px; height: 150px;">
+                      <p>Full Screening Report</p> 
+                      <p>$39.99</p> 
+                  </label>
+                  &nbsp;
+                  <label>
+                      <input type="radio" name="opt1" value="2" ngModel  />
+                      <img src="../../../assets/screening2.png" class="thumbnail"style="max-width:222px; height: 150px;">
+                      <p>Credit Report</p>
+                      <p>$24.99</p>
+                    </label>              
+                    <label>
+                        <input type="radio" name="opt1" value="3" ngModel  />
+                        <img src="../../../assets/screening3.png" class="thumbnail" style="max-width:222px; height: 150px;">
+                        <p>Background Check</p>
+                        <p>$24.99</p>
+                    </label>
+                  </div>
+                <hr>
+                <h3 style="font-style: bold;">2. Enter Your Applicant's Information</h3>
+              <div id="user-data">
+                <div class="row">
+                  <div class="form-group col-xs-6">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" class="form-control" name="applicantFirstName" ngModel required>
+                </div>
+                <div class="form-group col-xs-6">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" class="form-control" name="applicantLastName" ngModel required>
+                </div>
+              </div>
+                <div class="form-group">
+                  <label for="applicantEmail">Their Email Address</label>
+                  <input type="email" id="applicantEmail" name="applicantEmail" ngModel class="form-control" required email>
+                </div>
+                <div class="form-group">
+                  <label for="applicantPhoneNo">Phone (Optional): </label>
+                  <input type="tel" minlength="9" maxlength="13" name="applicantPhoneNo" ngModel class="form-control">
+                </div>
+                <br>
+                <button type="button" class="btn btn-primary" disabled>
+                  Add Another Applicant
+                </button>
+                <p>This button is disabled.</p>
+              </div> 
+              <hr> 
+              <br>
+              <br>
+              <br>   
+    
+          <button class="btn btn-success btn-block" type="submit" [disabled]="!f.valid" >Send Requests</button>
+          <p>After sending requests check tenant's inbox to proceed.</p>
+        </form>
+        <br>
+        <div *ngIf="userIsAuthenticated">
+            <button class="btn btn-success btn-block" routerLink="/dashboard">Go back to DashBoard</button>
+        </div>
+        
+      </div>
+    </div>
+    </div>
+    </div>
+    </body>
+    
+    
+    
+    
+    

@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <button mat-raised-button color="primary" class="btn btn-block" routerLink="/tenant-rent-application-form">Create a new Application</button>
+      <br>
+      <hr>
+      <br>
+
+      <h4>Your Applications: </h4>
+
+      <div *ngFor="let info of infoSentToServer; let i = index">
+        <div class="bs-callout bs-callout-success">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Application No.: {{i+1}}</h3>
+            </div>
+            <div class="panel-body">
+              <h3>Employment & Income</h3>
+              <p>Employer: {{info.employer}}</p>
+              <p>Title / Position: {{info.employmentPosition}}</p>
+              <p>Start Date: {{info.employmentStartDate}}</p>
+              <p>End Date: {{info.employmentEndDate}}</p>
+              <p>Contact First Name: {{info.contactFirstName}}</p>
+              <p>Contact Last Name: {{info.contactLastName}}</p>
+              <p>Contact Email: {{info.contactEmail}}</p>
+              <p>Contact Phone: {{info.contactPhone}}</p>
+
+              <h3>Income Details</h3>
+              <p>Income Source: {{info.incomeSource}}</p>
+              <p>Monthly Amount: {{info.monthlyAmount}}</p>
+              <p>Additional Income Info: {{info.addIncomeInfo}}</p>
+
+              <h3>Residence History</h3>
+              <p>Street Address: {{info.streetAddress}}</p>
+              <p>Residence City: {{info.residenceCity}}</p>
+              <p>Rresidence State: {{info.residenceState}}</p>
+              <p>Residence Zip Code: {{info.residenceZipCode}}</p>
+              <p>Residence Move In Date: {{info.residenceMoveInDate}}</p>
+              <p>Residence Move Out Date: {{info.residenceMoveOutDate}}</p>
+
+              <h3>References</h3>
+              <p>First Name: {{info.refFirstName}}</p>
+              <p>Last Name: {{info.refLastName}}</p>
+              <p>Phone: {{info.refPhone}}</p>
+              <p>Email: {{info.refEmail}}</p>
+              <p>Relation: {{info.refRelation}}</p>
+              <p>Years Known: {{info.refYearsKnown}}</p>
+              <br>
+              <button type="button" class="btn btn-block btn-danger"(click)="onDeleteApplication(info._id)">Delete This Application</button>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

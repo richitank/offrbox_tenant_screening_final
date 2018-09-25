@@ -1,0 +1,12 @@
+<div class="container">
+  <h3>List of Properties:</h3>
+  <br>
+  <div class="container" *ngFor="let property of propertyForm">
+    <div class="well">Property Owner: {{property.creatorFirstName}}
+      <br> Property Type: {{property.propertyType}}
+      <br> Address: {{property.propertyAddress}}, {{property.propertyCity}}, {{property.propertyState}}, {{property.propertyZipCode}}
+      <button class="btn btn-block btn-success" (click)="sendApplicationInfo()">Interested! Send Application No. 1 to Landlord </button>
+    </div>
+    <br>
+  </div>
+</div>

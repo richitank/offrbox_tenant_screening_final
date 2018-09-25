@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default" style="background-color: white">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <a routerLink="/" class="navbar-brand">
+        <span class="glyphicon glyphicon-home"></span> Home
+      </a>
+    </div>
+    <ul class="nav navbar-nav navbar-right ">
+      <!-- Landlord/Owner Dashboard -->
+      <li *ngIf="userIsAuthenticated">
+        <a mat-button routerLink="/dashboard">Dashboard</a>
+      </li>
+
+      <!-- Tenant Dashboard -->
+      <li *ngIf="tenantIsAuthenticated">
+        <a mat-button routerLink="/tenant-dashboard">Dashboard</a>
+      </li>
+
+      <li *ngIf="!userIsAuthenticated && !tenantIsAuthenticated">
+        <a mat-button routerLink="/home-signin">Owner Login</a>
+      </li>
+      <li *ngIf="!userIsAuthenticated && !tenantIsAuthenticated">
+        <a mat-button routerLink="/home-signup">Owner Signup</a>
+      </li>
+      <li *ngIf="!userIsAuthenticated && !tenantIsAuthenticated">
+        <a mat-button routerLink="/tenant-signin">Tenant Login</a>
+      </li>
+      <li *ngIf="!userIsAuthenticated && !tenantIsAuthenticated">
+        <a mat-button routerLink="/tenant-signup">Tenant Signup</a>
+      </li>
+
+      <!-- Landlord/owner Logout -->
+      <li *ngIf="userIsAuthenticated">
+        <button mat-raised-button color="primary" class="btn btn-primary btn-lg" (click)="onOwnerLogout()" style="margin-top: 7px">Logout</button>
+      </li>
+      <!-- Tenant Logout -->
+      <li *ngIf="tenantIsAuthenticated">
+        <button mat-raised-button color="primary" class="btn btn-primary btn-lg" (click)="onTenantLogout()" style="margin-top: 7px">Logout</button>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>

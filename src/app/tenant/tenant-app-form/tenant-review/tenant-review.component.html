@@ -1,0 +1,60 @@
+<div class="container" style="width:800px">
+
+  <mat-accordion multi="true">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <h4>Employment Details</h4>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <h4>Employer: {{formData.employer}}
+          <br> Contact Name: {{formData.contactFirstName}} {{formData.contactLastName}}
+          <br> Contact Email : {{formData.contactEmail}}
+          <br> Contact Phone : {{formData.contactPhone}}
+          <br> Title/Position:{{formData.employmentPosition}}
+          <br> Employment Start Date: {{formData.employmentStartDate}}
+          <br> Employment End Date:{{formData.employmentEndDate}}
+          <br> Income Source:{{formData.incomeSource}}
+          <br> Monthly Income: {{formData.monthlyAmount}}
+          <br> Additional Income Info: {{formData.addIncomeInfo}}
+          <br> </h4>
+
+      </mat-panel-description>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <h4>Residence History</h4>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <h4>Address: {{formData.streetAddress}} {{formData.residenceCity}} {{formData.residenceState}} {{formData.residenceZipCode}}
+          <br> Move-In-Date: {{formData.residenceMoveInDate}}
+          <br> Move-Out-Date : {{formData.residenceMoveOutDate}}
+          <br>
+        </h4>
+      </mat-panel-description>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <h4>References</h4>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <h4> Reference Name:{{formData.refFirstName}} {{formData.refLastName}}
+          <br> Reference Contact: {{formData.refPhone}}
+          <br> Reference Email: {{formData.refEmail}}
+          <br> Relation: {{formData.refRelation}}
+          <br> Years Known: {{formData.refYearsKnown}}
+        </h4>
+
+      </mat-panel-description>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <br>
+  <br>
+
+  <button mat-raised-button color="primary" type="submit" (click)="onSubmit()" style="align-items:center;">Submit</button>
+  <span></span>
+  <button mat-raised-button type="button" (click)="onBackButton()">Go Back and Edit</button>
+</div>

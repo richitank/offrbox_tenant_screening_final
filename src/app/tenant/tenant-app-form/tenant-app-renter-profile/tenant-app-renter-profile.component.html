@@ -1,0 +1,171 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form [formGroup]="tenantAppForm" (submit)="onClickReview()" #f="ngForm">
+        <div class="container" style="width:800px">
+          <div class="well">
+            <h2>Employment & Income</h2>
+            <div id="user-data">
+              <div class="row">
+                <div class="form-group col-xs-6">
+                  <label for="employer">Employer</label>
+                  <input type="text" id="employer" class="form-control" formControlName="employer">
+                </div>
+                <div class="form-group col-xs-6">
+                  <label for="employmentPosition">Title / Position</label>
+                  <input type="text" id="employmentPosition" class="form-control" formControlName="employmentPosition">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-xs-6">
+                  <label for="employmentStartDate">Start Date</label>
+                  <input type="text" bsDatepicker id="employmentStartDate" formControlName="employmentStartDate" class="form-control">
+                </div>
+                <div class="form-group col-xs-6">
+                  <label for="employmentEndDate">End Date</label>
+                  <input type="text" id="employmentEndDate" bsDatepicker formControlName="employmentEndDate" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-xs-6">
+                  <label for="contactFirstName">Contact First Name</label>
+                  <input type="text" id="contactFirstName" formControlName="contactFirstName" class="form-control">
+                </div>
+                <div class="form-group col-xs-6">
+                  <label for="contactLastName">Contact Last Name</label>
+                  <input type="text" id="contactLastName" formControlName="contactLastName" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-xs-6">
+                  <label for="contactEmail">Contact Email</label>
+                  <input type="email" id="contactEmail" formControlName="contactEmail" class="form-control">
+                </div>
+                <div class="form-group col-xs-6">
+                  <label for="contactPhone">Contact Phone</label>
+                  <input type="number" id="contactPhone" formControlName="contactPhone" class="form-control">
+                </div>
+              </div>
+              <br>
+              <button type="button" class="btn btn-primary btn-block" disabled>
+                + Add Another Employer
+              </button>
+
+              <hr>
+              <div class="row">
+                <div class="form-group col-xs-6">
+                  <label for="incomeSource">Income Source</label>
+                  <input type="text" id="incomeSource" formControlName="incomeSource" class="form-control">
+                </div>
+                <div class="form-group col-xs-6">
+                  <label for="monthlyAmount">Monthly Amount</label>
+                  <input type="number" id="monthlyAmount" formControlName="monthlyAmount" class="form-control">
+                  <!-- <p class="">About ${{annualSalary * 12}} annually.</p> -->
+                </div>
+              </div>
+              <br>
+              <button type="button" class="btn btn-primary btn-block" disabled>
+                + Add Another Income Source
+              </button>
+
+              <hr>
+              <div class="form-group">
+                <label for="addIncomeInfo">Additional Employment or Income Info</label>
+                <textarea type="text" id="addIncomeInfo" formControlName="addIncomeInfo" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" style="width:800px">
+          <div class="well">
+
+            <h2>Residence History</h2>
+            <div class="form-group">
+              <label for="streetAddress">Street Address, Apt/Unit</label>
+              <input type="text" id="streetAddress" formControlName="streetAddress" class="form-control">
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-6">
+                <label for="residenceCity">City</label>
+                <input type="text" id="residenceCity" formControlName="residenceCity" class="form-control">
+                <input type="checkbox"> I currently live here
+              </div>
+              <div class="form-group col-xs-4">
+                <label for="residenceState">State</label>
+                <input type="text" id="residenceState" formControlName="residenceState" class="form-control">
+              </div>
+              <div class="form-group col-xs-2">
+                <label for="residenceZipCode">Zip Code</label>
+                <input type="tel" maxlength="6" id="residenceZipCode" formControlName="residenceZipCode" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-6">
+                <label for="residenceMoveInDate">Move In Date</label>
+                <input type="text" bsDatepicker id="residenceMoveInDate" formControlName="residenceMoveInDate" class="form-control">
+              </div>
+              <div class="form-group col-xs-6">
+                <label for="residenceMoveOutDate">Move Out Date</label>
+                <input type="text" bsDatepicker id="residenceMoveOutDate" formControlName="residenceMoveOutDate" class="form-control">
+              </div>
+              <br>
+
+              <button type="button" class="btn btn-primary btn-block" disabled>
+                + Add Another Residence
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" style="width:800px">
+          <div class="well">
+            <h2>References</h2>
+            <div class="row">
+              <div class="form-group col-xs-6">
+                <label for="refFirstName">Reference First Name</label>
+                <input type="text" id="refFirstName" formControlName="refFirstName" class="form-control">
+              </div>
+              <div class="form-group col-xs-6">
+                <label for="refLastName">Reference Last Name</label>
+                <input type="text" id="refLastName" formControlName="refLastName" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-6">
+                <label for="refPhone">Reference Phone</label>
+                <input type="text" id="refPhone" formControlName="refPhone" class="form-control">
+              </div>
+              <div class="form-group col-xs-6">
+                <label for="refEmail">Reference Email</label>
+                <input type="email" id="refEmail" formControlName="refEmail" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-6">
+                <label for="refRelation">Relation</label>
+                <input type="text" id="refRelation" formControlName="refRelation" class="form-control">
+              </div>
+              <div class="form-group col-xs-6">
+                <label for="refYearsKnown">Years Known</label>
+                <input type="tel" id="refYearsKnown" formControlName="refYearsKnown" class="form-control">
+              </div>
+            </div>
+            <input type="checkbox">Request a testimonial (requires an email address).
+            <br>
+            <button type="button" class="btn btn-primary btn-block" disabled>
+              + Add Another Reference
+            </button>
+          </div>
+          <br>
+          <br>
+          <br>
+
+          <button class="btn btn-success btn-block" type="submit">Review</button>
+        </div>
+
+      </form>
+      <br>
+    </div>
+  </div>
+</div>

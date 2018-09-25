@@ -1,0 +1,27 @@
+<div class="container" style="width:700px; height: 500px; justify-content:center;  ">
+  <div class="well" id="well1">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-1 col-md-offset-2">
+        <form (ngSubmit)="onSignin(f)" #f="ngForm">
+
+          <div class="form-group" id="form1">
+            <h2 style="text-align:center; ">LOGIN</h2>
+            <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-Mail Address:</label>
+            <input type="email" style="margin-left: 20px;" name="email" ngModel class="form-control" required email>
+          </div>
+          <div class="form-group">
+            <label for="password">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password:</label>
+            <input type="password" id="password" name="password" ngModel class="form-control" required style="margin-left:20px">
+          </div>
+          <br>
+          <div class="form-group">
+            <button mat-raised-button color="primary" class="btn btn-block" type="submit" [disabled]="!f.valid" style="margin-left: 20px;">Sign In</button>
+            <!-- <button class="btn btn-primary" type="submit" [disabled]="!f.valid" routerLink="/loggedin">Sign In</button> -->
+            <p style="margin-left: 20px;"> If password incorrect, you'll will NOT be redirected to the Dashboard. So enter valid mailId/password</p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

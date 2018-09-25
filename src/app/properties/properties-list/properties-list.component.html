@@ -1,0 +1,13 @@
+<h4>Your Properties:</h4>
+<div class="row">
+  <div *ngFor="let info of infoSentToServer">
+    <div class="card col-xs-4">
+      <div class="card-body">
+        <h5 class="card-title">{{info.propertyName}}</h5>
+        <p class="card-text">{{info.propertyAddress}}</p>
+
+        <button mat-raised-button color="primary" (click)="onClickDeleteProperty(info._id)">Delete Property</button>
+      </div>
+    </div>
+  </div>
+</div>

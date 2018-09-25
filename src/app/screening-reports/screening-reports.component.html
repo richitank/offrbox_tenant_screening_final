@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-9">
+
+
+      <h3>Screening Reports
+        <span style="float: right">
+          <button mat-raised-button color="primary" routerLink="/screening-request">Request Reports</button>
+        </span>
+      </h3>
+
+      <div *ngFor="let info of infoSentToServer">
+
+        <div class="bs-callout bs-callout-success">
+          <h3>{{info.applicantFirstName}} {{info.applicantLastName}}</h3>
+          <h5>
+            <a target="_top" href="mailto:{{info.applicantEmail}}">{{info.applicantEmail}}</a>
+          </h5>
+          <br>
+          <h4>Credit Report/ Background Check
+            <button disabled>REQUESTED</button>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

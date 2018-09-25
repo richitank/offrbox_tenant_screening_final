@@ -1,0 +1,15 @@
+#well2
+{
+    align-items: center;
+     
+    margin-left: 250px;
+}
+.hugebuttons{
+
+    width:170px;
+    height:150px;
+}
+
+.glyphicon.home{
+ font-size: 50px;
+}

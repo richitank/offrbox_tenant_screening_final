@@ -1,0 +1,84 @@
+/* .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;} */
+
+    /* .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;} */
+
+
+    body{
+       
+        padding-top:40px;
+     
+   
+    }
+
+
+    li{
+
+        
+        font-style: bold;
+        font-size:16px
+    }
+
+
+    /* #con1{
+        /* scrollbar-shadow-color: rgb(87, 87, 228);
+
+        -moz-window-shadow: rgb(87, 87, 228);
+        text-shadow: red;
+        box-shadow: 10px 10px rgb(87, 87, 228); */ */
+    
+
+    #con2{
+
+        box-shadow: 10px 5px 5px  rgb(65, 65, 117);
+    
+    }
+    #well1{
+
+        /* box-shadow: 1px 1px 5px 2px rgb(200, 200, 204); */
+
+        box-shadow: 2px 4px 3px 2px rgb(170, 170, 173);
+      }
+      
+      
