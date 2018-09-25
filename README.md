@@ -1,5 +1,10 @@
 # Application developed for OffrBox
 
+This application was built as an alpha version for one of OffrBox's Client.
+The application makes the process of renting and leasing easier for both the landlord and tenant.
+It has functionalities where the landlord can send different types of screening requests to tenants.
+Tenants can look for properties to rent and fill out applications.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
 ## Development server
